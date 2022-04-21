@@ -2,7 +2,7 @@
 class Man:
     """サンプルクラス"""
 
-    def __init__(self, name):
+    def __init__(self, name): # コンストラクタ(インスタンスが作成される際に一度だけ呼ばれる)
         self.name = name
         print("Initilized!")
 
@@ -12,6 +12,6 @@ class Man:
     def goodbye(self):
         print("Good-bye " + self.name + "!")
 
-m = Man("David")
+m = Man("David") # インスタンス
 m.hello()
 m.goodbye()

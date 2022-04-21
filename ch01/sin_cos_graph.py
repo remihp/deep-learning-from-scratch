@@ -12,6 +12,6 @@ plt.plot(x, y1, label="sin")
 plt.plot(x, y2, linestyle = "--", label="cos")
 plt.xlabel("x") # x軸のラベル
 plt.ylabel("y") # y軸のラベル
-plt.title('sin & cos')
+plt.title('sin & cos') # タイトル
 plt.legend()
 plt.show()
