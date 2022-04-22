@@ -4,7 +4,8 @@ import matplotlib.pylab as plt
 
 
 def step_function(x):
-    return np.array(x > 0, dtype=np.int)
+    y = x > 0
+    return y.astype(np.int64) # True -> 1, False -> 0
 
 X = np.arange(-5.0, 5.0, 0.1)
 Y = step_function(X)

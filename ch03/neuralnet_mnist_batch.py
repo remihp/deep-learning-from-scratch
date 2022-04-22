@@ -41,7 +41,7 @@ accuracy_cnt = 0
 for i in range(0, len(x), batch_size):
     x_batch = x[i:i+batch_size]
     y_batch = predict(network, x_batch)
-    p = np.argmax(y_batch, axis=1)
-    accuracy_cnt += np.sum(p == t[i:i+batch_size])
+    p = np.argmax(y_batch, axis=1) # 1次元目の要素ごとに
+    accuracy_cnt += np.sum(p == t[i:i+batch_size]) # Trueの個数を算出
 
 print("Accuracy:" + str(float(accuracy_cnt) / len(x)))
