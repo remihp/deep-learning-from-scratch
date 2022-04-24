@@ -35,7 +35,7 @@ def numerical_gradient(f, X):
         return grad
 
 
-def function_2(x):
+def function_2(x): # x = [x0, x1]
     if x.ndim == 1:
         return np.sum(x**2)
     else:

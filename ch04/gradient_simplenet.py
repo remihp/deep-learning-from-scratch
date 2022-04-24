@@ -8,7 +8,7 @@ from common.gradient import numerical_gradient
 
 class simpleNet:
     def __init__(self):
-        self.W = np.random.randn(2,3)
+        self.W = np.random.randn(2,3) # 2×3
 
     def predict(self, x):
         return np.dot(x, self.W)
@@ -26,6 +26,6 @@ t = np.array([0, 0, 1])
 net = simpleNet()
 
 f = lambda w: net.loss(x, t)
-dW = numerical_gradient(f, net.W)
+dW = numerical_gradient(f, net.W) # 損失関数の重みWの時の勾配
 
 print(dW)
