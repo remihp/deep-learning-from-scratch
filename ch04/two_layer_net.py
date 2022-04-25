@@ -9,14 +9,14 @@ import numpy as np
 class TwoLayerNet:
 
     def __init__(self, input_size, hidden_size, output_size, weight_init_std=0.01):
-        # 重みの初期化
+        # 重みの初期化(重みは正規乱数,バイアスは0)
         self.params = {}
         self.params['W1'] = weight_init_std * np.random.randn(input_size, hidden_size)
         self.params['b1'] = np.zeros(hidden_size)
         self.params['W2'] = weight_init_std * np.random.randn(hidden_size, output_size)
         self.params['b2'] = np.zeros(output_size)
 
-    def predict(self, x):
+    def predict(self, x): # 推論(xは画像データ)
         W1, W2 = self.params['W1'], self.params['W2']
         b1, b2 = self.params['b1'], self.params['b2']
     
@@ -28,32 +28,32 @@ class TwoLayerNet:
         return y
         
     # x:入力データ, t:教師データ
-    def loss(self, x, t):
+    def loss(self, x, t): # 損失関数の値
         y = self.predict(x)
         
         return cross_entropy_error(y, t)
     
-    def accuracy(self, x, t):
+    def accuracy(self, x, t): # 認識制度
         y = self.predict(x)
-        y = np.argmax(y, axis=1)
-        t = np.argmax(t, axis=1)
+        y = np.argmax(y, axis=1) # 予測したラベル
+        t = np.argmax(t, axis=1) # 正解ラベル
         
         accuracy = np.sum(y == t) / float(x.shape[0])
         return accuracy
         
     # x:入力データ, t:教師データ
-    def numerical_gradient(self, x, t):
+    def numerical_gradient(self, x, t): # 重みパラメータに対する勾配を求める
         loss_W = lambda W: self.loss(x, t)
         
         grads = {}
-        grads['W1'] = numerical_gradient(loss_W, self.params['W1'])
-        grads['b1'] = numerical_gradient(loss_W, self.params['b1'])
-        grads['W2'] = numerical_gradient(loss_W, self.params['W2'])
-        grads['b2'] = numerical_gradient(loss_W, self.params['b2'])
+        grads['W1'] = numerical_gradient(loss_W, self.params['W1']) # 1層目の重みの勾配
+        grads['b1'] = numerical_gradient(loss_W, self.params['b1']) # 1層目のバイアスの勾配
+        grads['W2'] = numerical_gradient(loss_W, self.params['W2']) # 2層目の重みの勾配
+        grads['b2'] = numerical_gradient(loss_W, self.params['b2']) # 2層目のバイアスの勾配
         
         return grads
         
-    def gradient(self, x, t):
+    def gradient(self, x, t): # 重みパラメータに対する勾配を求める(高速版)
         W1, W2 = self.params['W1'], self.params['W2']
         b1, b2 = self.params['b1'], self.params['b2']
         grads = {}
