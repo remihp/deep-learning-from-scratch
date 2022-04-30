@@ -4,19 +4,21 @@ from common.functions import *
 from common.util import im2col, col2im
 
 
-class Relu:
+class Relu: # ch05: ReLUレイヤ
+    # mask: True/Falseからなるnumpy配列(xが0以下をTrue,0より大きい要素をFalse)
+    # x: 順伝播の入力
     def __init__(self):
         self.mask = None
 
     def forward(self, x):
         self.mask = (x <= 0)
-        out = x.copy()
-        out[self.mask] = 0
+        out = x.copy() # 入力のコピー
+        out[self.mask] = 0 # xが0以下(True)の要素を全て0
 
         return out
 
     def backward(self, dout):
-        dout[self.mask] = 0
+        dout[self.mask] = 0 # 0以下は0
         dx = dout
 
         return dx
