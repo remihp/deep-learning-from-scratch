@@ -5,6 +5,8 @@ import numpy as np
 from dataset.mnist import load_mnist
 from two_layer_net import TwoLayerNet
 
+# 数値微分と誤差逆伝播法で求めた勾配の結果が一致(近い値)することを確認する
+
 # データの読み込み
 (x_train, t_train), (x_test, t_test) = load_mnist(normalize=True, one_hot_label=True)
 
