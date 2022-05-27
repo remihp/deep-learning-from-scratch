@@ -29,7 +29,7 @@ optimizers["Adam"] = Adam(lr=0.3)
 
 idx = 1
 
-for key in optimizers:
+for key in optimizers: # 更新手法を一つ一つ
     optimizer = optimizers[key]
     x_history = []
     y_history = []
@@ -40,7 +40,7 @@ for key in optimizers:
         y_history.append(params['y'])
         
         grads['x'], grads['y'] = df(params['x'], params['y'])
-        optimizer.update(params, grads)
+        optimizer.update(params, grads) # パラメータの更新
     
 
     x = np.arange(-10, 10, 0.01)

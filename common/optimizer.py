@@ -71,7 +71,7 @@ class AdaGrad:
             
         for key in params.keys():
             self.h[key] += grads[key] * grads[key]
-            params[key] -= self.lr * grads[key] / (np.sqrt(self.h[key]) + 1e-7)
+            params[key] -= self.lr * grads[key] / (np.sqrt(self.h[key]) + 1e-7) # 0除算防止
 
 
 class RMSprop:
