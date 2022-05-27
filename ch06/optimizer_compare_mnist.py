@@ -40,9 +40,9 @@ for i in range(max_iterations):
     x_batch = x_train[batch_mask]
     t_batch = t_train[batch_mask]
     
-    for key in optimizers.keys():
-        grads = networks[key].gradient(x_batch, t_batch)
-        optimizers[key].update(networks[key].params, grads)
+    for key in optimizers.keys(): # 更新手法ごとに
+        grads = networks[key].gradient(x_batch, t_batch) # 勾配
+        optimizers[key].update(networks[key].params, grads) # パラメータの更新
     
         loss = networks[key].loss(x_batch, t_batch)
         train_loss[key].append(loss)
