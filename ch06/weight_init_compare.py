@@ -25,7 +25,7 @@ optimizer = SGD(lr=0.01)
 
 networks = {}
 train_loss = {}
-for key, weight_type in weight_init_types.items():
+for key, weight_type in weight_init_types.items(): # 初期値の種類ごとに
     networks[key] = MultiLayerNet(input_size=784, hidden_size_list=[100, 100, 100, 100],
                                   output_size=10, weight_init_std=weight_type)
     train_loss[key] = []
@@ -37,7 +37,7 @@ for i in range(max_iterations):
     x_batch = x_train[batch_mask]
     t_batch = t_train[batch_mask]
     
-    for key in weight_init_types.keys():
+    for key in weight_init_types.keys(): # 初期値の種類ごとに
         grads = networks[key].gradient(x_batch, t_batch)
         optimizer.update(networks[key].params, grads)
     
