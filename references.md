@@ -21,4 +21,9 @@
   https://kratzert.github.io/2016/02/12/understanding-the-gradient-flow-through-the-batch-normalization-layer.html
 
 - Dropout: A Simple Way to Prevent Neural Networks from Overfitting  
-  https://www.cs.toronto.edu/~rsalakhu/papers/srivastava14a.pdf
+  https://www.cs.toronto.edu/~rsalakhu/papers/srivastava14a.pdf  
+
+### ハイパーパラメータの最適化
+- Practical Bayesian Optimization of Machine Learning Algorithms(ベイズ最適化)  
+  https://arxiv.org/abs/1206.2944  
+

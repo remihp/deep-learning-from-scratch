@@ -18,7 +18,7 @@ t_train = t_train[:500]
 validation_rate = 0.20
 validation_num = int(x_train.shape[0] * validation_rate)
 x_train, t_train = shuffle_dataset(x_train, t_train)
-x_val = x_train[:validation_num]
+x_val = x_train[:validation_num] # 検証データ
 t_val = t_train[:validation_num]
 x_train = x_train[validation_num:]
 t_train = t_train[validation_num:]
@@ -32,7 +32,7 @@ def __train(lr, weight_decay, epocs=50):
                       optimizer='sgd', optimizer_param={'lr': lr}, verbose=False)
     trainer.train()
 
-    return trainer.test_acc_list, trainer.train_acc_list
+    return trainer.test_acc_list, trainer.train_acc_list # 精度のリスト
 
 
 # ハイパーパラメータのランダム探索======================================
@@ -41,8 +41,11 @@ results_val = {}
 results_train = {}
 for _ in range(optimization_trial):
     # 探索したハイパーパラメータの範囲を指定===============
-    weight_decay = 10 ** np.random.uniform(-8, -4)
-    lr = 10 ** np.random.uniform(-6, -2)
+    # weight_decay = 10 ** np.random.uniform(-8, -4) # 10^(-8) ~ 10^(-4)からランダムに
+    weight_decay = 10 ** np.random.uniform(-8, -5) # 値の範囲を狭める
+    # lr = 10 ** np.random.uniform(-6, -2) # 10^(-6) ~ 10^(-2)からランダムに
+    lr = 10 ** np.random.uniform(-3, -2) # 値の範囲を狭める
+
     # ================================================
 
     val_acc_list, train_acc_list = __train(lr, weight_decay)
@@ -58,7 +61,7 @@ col_num = 5
 row_num = int(np.ceil(graph_draw_num / col_num))
 i = 0
 
-for key, val_acc_list in sorted(results_val.items(), key=lambda x:x[1][-1], reverse=True):
+for key, val_acc_list in sorted(results_val.items(), key=lambda x:x[1][-1], reverse=True): # 精度が良い順に描画s
     print("Best-" + str(i+1) + "(val acc:" + str(val_acc_list[-1]) + ") | " + key)
 
     plt.subplot(row_num, col_num, i+1)
