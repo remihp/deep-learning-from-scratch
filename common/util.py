@@ -68,6 +68,7 @@ def im2col(input_data, filter_h, filter_w, stride=1, pad=0):
     return col
 
 
+# Convolutionレイヤの逆伝播の際に利用 
 def col2im(col, input_shape, filter_h, filter_w, stride=1, pad=0):
     """
 

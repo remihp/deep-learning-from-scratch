@@ -27,3 +27,10 @@
 - Practical Bayesian Optimization of Machine Learning Algorithms(ベイズ最適化)  
   https://arxiv.org/abs/1206.2944  
 
+### 代表的なネットワーク
+- GradientBased Learning Applied to Document Recognition  
+  http://vision.stanford.edu/cs598_spring07/papers/Lecun98.pdf
+
+- ImageNet Classification with Deep Convolutional Neural Networks  
+  https://proceedings.neurips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf
+
