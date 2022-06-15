@@ -1,6 +1,8 @@
 # 参考文献リスト
 
-書籍に出てくる参考文献の中で気になったもののリスト
+書籍に出てくる参考文献の中で気になったもののリスト  
+→ https://github.com/remihp/paper-reading でまとめているものあり
+
 
 ### パラメータの更新手法
 - Adam: A Method for Stochastic Optimization  
