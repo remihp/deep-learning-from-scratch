@@ -36,4 +36,11 @@
 
 - ImageNet Classification with Deep Convolutional Neural Networks(AlexNet)  
   https://proceedings.neurips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf
+  
+- Very Deep Convolutional Networks for Large-Scale Image Recognition(VGG)  
+  https://arxiv.org/abs/1409.1556
+  
+- Deep Residual Learning for Image Recognition(ResNet)  
+  https://arxiv.org/abs/1512.03385v1
+  
 
