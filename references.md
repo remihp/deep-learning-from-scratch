@@ -6,7 +6,8 @@
 
 ### パラメータの更新手法
 - Adam: A Method for Stochastic Optimization  
-  https://arxiv.org/abs/1412.6980v9　　
+  https://arxiv.org/abs/1412.6980v9  
+  
   https://github.com/remihp/paper-reading/blob/main/Adam:%20A%20Method%20for%20Stochastic%20Optimization.md
 
 ### 重みパラメータの初期値
