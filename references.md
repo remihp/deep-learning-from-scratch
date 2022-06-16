@@ -40,7 +40,17 @@
 - Very Deep Convolutional Networks for Large-Scale Image Recognition(VGG)  
   https://arxiv.org/abs/1409.1556
   
+- Going Deeper with Convolutions(GoogLeNet)    
+  https://arxiv.org/abs/1409.4842
+  
 - Deep Residual Learning for Image Recognition(ResNet)  
   https://arxiv.org/abs/1512.03385v1
+
+### ディープラーニングのアプリケーション
+- Rich feature hierarchies for accurate object detection and semantic segmentation(R-CNN)   
+  https://arxiv.org/abs/1311.2524
+  
+- Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks   
+  https://arxiv.org/abs/1506.01497
   
 
