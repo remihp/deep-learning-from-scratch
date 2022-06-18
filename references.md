@@ -59,5 +59,8 @@
 - A Neural Algorithm of Artistic Style  
   https://arxiv.org/abs/1508.06576
 
+- Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks(DCGAN)  
+  https://arxiv.org/abs/1511.06434
+
   
 
