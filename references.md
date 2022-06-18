@@ -52,5 +52,12 @@
   
 - Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks   
   https://arxiv.org/abs/1506.01497
+
+- Fully Convolutional Networks for Semantic Segmentation(FCN)  
+  https://arxiv.org/abs/1411.4038
+  
+- A Neural Algorithm of Artistic Style  
+  https://arxiv.org/abs/1508.06576
+
   
 
