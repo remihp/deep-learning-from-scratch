@@ -50,6 +50,19 @@ $$
 y_{k} \ =\ \frac{\exp(a_{k})}{\sum\exp( a_{i})}
 $$
 
+ソフトマックス関数は、指数関数の値が大きくなりすぎてオーバーフローする
+
+$$
+\begin{align*}
+y_k &= \frac{\exp(a_{k})}{\sum\exp( a_{i})} \\
+&= \frac{C\exp(a_{k})}{C\sum\exp( a_{i})} \\
+&= \frac{\exp(a_{k}+\log C)}{\sum\exp( a_{i}+\log C)} \\
+&= \frac{\exp(a_{k}+C')}{\sum\exp( a_{i}+C')} \\
+\end{align*}
+$$
+
+となり、オーバーフロー対策として$C'=-$入力信号の最大値として実装する
+
 
 ## 3.6 バッチ処理
 
