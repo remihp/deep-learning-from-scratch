@@ -2,6 +2,7 @@
 
 ## 3.1 パーセプトロンからNNへ
 
+<img src="https://user-images.githubusercontent.com/98373139/174490872-eff13f5e-de48-4923-afc5-7ab9e6bf5d38.png" width="800">
 
 ## 3.2 活性化関数
 
