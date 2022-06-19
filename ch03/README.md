@@ -38,6 +38,7 @@ $$
 
 ## 3.3 3層NNの実装
 
+<img src="https://user-images.githubusercontent.com/98373139/174492812-fd01bb30-cb03-4a1c-aaaf-7c3cd9b94082.png" width="700">
 
 ## 3.5 出力層の設計
 
