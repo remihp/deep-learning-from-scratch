@@ -90,6 +90,7 @@ $$
 $$
 
 さらに固有のスケールとシフトで変換
+
 $$
 y_i \  \leftarrow \ \gamma\hat x_i + \beta
 $$
