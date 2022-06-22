@@ -18,6 +18,7 @@ $$
 
 **Momentum**  
 $v$ :物理での"速度" 
+
 $$
 v \ \leftarrow \ \alpha v -\eta\frac{\delta L}{\delta W}
 $$
